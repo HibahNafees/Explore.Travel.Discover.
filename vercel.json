@@ -1,0 +1,32 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "builds": [
+    {
+      "src": "api/index.php",
+      "use": "vercel-php@0.7.3",
+      "config": {
+        "excludeFiles": [
+          "node_modules/**",
+          "images/**",
+          "css/**",
+          "js/**",
+          "storage/**",
+          "README.md",
+          "vercel.json",
+          ".vercelignore"
+        ]
+      }
+    },
+    { "src": "css/**", "use": "@vercel/static" },
+    { "src": "js/**", "use": "@vercel/static" },
+    { "src": "images/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    {
+      "src": "/(css|js|images)/(.*)",
+      "dest": "/$1/$2",
+      "headers": { "Cache-Control": "public, max-age=86400" }
+    },
+    { "src": "/(.*)", "dest": "/api/index.php" }
+  ]
+}

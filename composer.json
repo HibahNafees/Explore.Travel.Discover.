@@ -1,5 +1,25 @@
 {
+    "name": "hibahnafees/explore-travel-discover",
+    "description": "Travel & tourism website: destinations, bookings and admin dashboard.",
+    "type": "project",
     "require": {
+        "php": "^8.1",
+        "ext-pdo": "*",
         "phpmailer/phpmailer": "^6.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "config": {
+        "platform": {
+            "php": "8.3.0"
+        },
+        "optimize-autoloader": true,
+        "sort-packages": true
     }
 }

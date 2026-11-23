@@ -1,0 +1,8 @@
+vendor
+.env
+.env.*
+!.env.example
+storage
+*.sqlite
+*.sqlite-*
+.git

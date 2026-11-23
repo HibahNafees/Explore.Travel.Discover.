@@ -1,0 +1,234 @@
+/* Admin dashboard styles (loaded on /admin pages only). */
+
+.admin-page{ padding-bottom: 4rem; }
+
+.admin-nav{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem 0;
+}
+.admin-nav a{
+  font-size: 1.6rem;
+  color:#555;
+  padding: .8rem 1.6rem;
+  border-radius: .5rem;
+  background:#fff;
+  box-shadow: 0 .2rem .6rem rgba(0,0,0,.06);
+}
+.admin-nav a i{ color: var(--orange); }
+.admin-nav a:hover{ color: var(--orange); }
+.admin-nav a.active{
+  background: var(--orange);
+  color:#fff;
+}
+.admin-nav a.active i{ color:#fff; }
+
+.admin-title{
+  font-size: 3rem;
+  color:#333;
+  padding: 1rem 0 2rem;
+}
+.admin-title-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.admin-title-row .btn{ margin-top: 0; }
+.admin-subtitle{
+  font-size: 2.2rem;
+  color:#333;
+  padding: 3rem 0 1rem;
+}
+
+.stat-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5rem;
+}
+.stat-card{
+  display: block;
+  background:#fff;
+  border-radius: .5rem;
+  padding: 2rem;
+  box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.08);
+  border-top: .4rem solid var(--orange);
+}
+a.stat-card:hover{ transform: translateY(-.3rem); }
+.stat-label{
+  display: block;
+  font-size: 1.5rem;
+  color:#777;
+}
+.stat-value{
+  display: block;
+  font-size: 3.4rem;
+  font-weight: 700;
+  color:#333;
+  padding-top: .5rem;
+}
+
+.table-wrap{
+  overflow-x: auto;
+  background:#fff;
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.08);
+  margin-bottom: 1.5rem;
+}
+.admin-table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.5rem;
+  color:#444;
+}
+.admin-table th{
+  text-align: left;
+  background:#333;
+  color:#fff;
+  padding: 1.2rem 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.admin-table td{
+  padding: 1rem;
+  border-bottom: .1rem solid #eee;
+  vertical-align: middle;
+}
+.admin-table tr:hover td{ background: rgba(255,165,0,.05); }
+.admin-table a{ color:#333; font-weight: 600; }
+.admin-table a:hover{ color: var(--orange); }
+.admin-table small{ color:#888; }
+.admin-table .fa-check{ color:#2e9d5b; }
+.admin-table .thumb{
+  width: 6rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: .3rem;
+}
+.admin-table .actions{
+  white-space: nowrap;
+}
+.admin-table .actions form{ display: inline; }
+.admin-table .actions .btn{ margin-left: .4rem; }
+.notes-cell{
+  max-width: 22rem;
+  font-size: 1.3rem;
+  color:#666;
+}
+
+.status-filter{
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  padding-bottom: 1.5rem;
+}
+.status-filter a{
+  font-size: 1.5rem;
+  color:#555;
+  padding: .5rem 1.4rem;
+  border: .1rem solid #ddd;
+  border-radius: 2rem;
+  background:#fff;
+}
+.status-filter a.active,
+.status-filter a:hover{
+  border-color: var(--orange);
+  color: var(--orange);
+}
+.status-form{
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+}
+.status-form select{
+  padding: .4rem .6rem;
+  font-size: 1.4rem;
+  border: .1rem solid #ccc;
+  border-radius: .3rem;
+  background:#fff;
+}
+
+.admin-form{
+  background:#fff;
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.08);
+  padding: 2rem;
+}
+.form-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2rem;
+}
+.form-grid .span-2{ grid-column: 1 / -1; }
+.admin-form label{
+  display: block;
+  font-size: 1.5rem;
+  color:#555;
+}
+.admin-form label small{ color:#999; }
+.admin-form input[type="text"],
+.admin-form input[type="number"],
+.admin-form select,
+.admin-form textarea{
+  display: block;
+  width: 100%;
+  margin-top: .4rem;
+  padding: .9rem 1rem;
+  font-size: 1.6rem;
+  color:#333;
+  border: .1rem solid rgba(0,0,0,.2);
+  border-radius: .5rem;
+  background:#fff;
+  text-transform: none;
+}
+.admin-form input:focus,
+.admin-form select:focus,
+.admin-form textarea:focus{ border-color: var(--orange); }
+.admin-form .checkbox{
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+.admin-form .checkbox input{
+  width: 1.8rem;
+  height: 1.8rem;
+  accent-color: var(--orange);
+}
+.form-actions{
+  display: flex;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.message-card{
+  background:#fff;
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.08);
+  padding: 1.8rem 2rem;
+  margin-bottom: 1.5rem;
+  border-left: .4rem solid #ddd;
+}
+.message-card.is-unread{ border-left-color: var(--orange); }
+.message-card header{
+  position: static;
+  background: none;
+}
+.message-card h3{
+  font-size: 2rem;
+  color:#333;
+}
+.message-card header a{ color: var(--orange); }
+.message-body{
+  font-size: 1.6rem;
+  color:#444;
+  line-height: 1.6;
+  padding: 1rem 0;
+}
+
+@media (max-width:768px){
+  .form-grid{ grid-template-columns: 1fr; }
+}

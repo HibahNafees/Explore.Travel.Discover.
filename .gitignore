@@ -1,2 +1,6 @@
 .DS_Store
 vendor/
+.env
+.vercel/
+storage/*.sqlite
+storage/*.sqlite-*
